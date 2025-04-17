@@ -1,0 +1,163 @@
+#1. Band Name Generator
+
+def band_name_generator():
+    cname=input("Enter city name")
+    xname=input("Enter animal name/ word")
+    print("your band name is",cname,xname)
+
+
+
+
+#2. Tip Calculator
+
+def tip_calculator(x,y,z):
+    tip=x*(y/100)
+    print(f"Total tip is {tip}")
+    total=x+tip
+    print(f"Total bill is {total}")
+    sharing=total/z
+    print(f"Total share per person is {sharing}")
+
+
+
+#3.BMI Calculator
+
+def bmi_calculator(w,h):
+    print(" Note \nWeight in kilogram & Hight in Meters")
+    bmi=0
+    bmi=w/h**2
+    if bmi>30:
+            print(f"weight is {round(bmi,2)} Obese")
+    elif bmi>=25:
+            print(f"weight is {round(bmi,2)} Over weight")
+    elif bmi>=18:
+            print(f"weight is {round(bmi,2)} Normal")
+    elif bmi>0:
+            print(f"weight is {round(bmi,2)} Under weight")
+    else:
+            print("Invalide")
+
+
+#4. Treasure Island Puzzel
+
+def Tresure():
+    print("welcome To Tresure Island \nYour mission is to find the Tresure")
+    Choice=input("Choice left/right")
+    if Choice=='left':
+        print("Correct choice lets move ahead")
+        Choice=input("Choice swim/wait")
+        if Choice=='wait':
+            print("Correct choice lets move ahead")
+            Choice=input("Choice a door red/blue/yellow")
+            if Choice=='yellow':
+                print("You Win!")
+            elif Choice=='red':
+                print("Burned by fire. \nGAME OVER.")
+            elif Choice=='blue':
+                print("Eaten by beasts. \nGAME OVER.")
+            else:
+                print("GAME OVER.")
+        else:
+            print("Attacked by trout \nGAME OVER.")
+    else:
+        print("Fall into a hole \nGAME OVER.")
+
+
+
+#5. Prime Number
+        
+def prime(x):
+    for i in range(2,(x//2)+1):
+        if x%i==0:
+            print(f"{x} is Not Prime")
+            break
+    else:
+        print(f"{x} is Prime")
+
+
+#6. Even_Odd
+        
+def even_odd(x):
+    if x%2==0:
+        print(f"{x} is Even")
+    else:
+        print(f"{x} is Odd")
+
+
+
+#7. Factorial
+
+def factorial(x):
+    y=1
+    for i in range (1,x+1):
+        y=y*i
+    print(y)
+
+
+#8. Large number In List
+'''
+li=[10,2,3,4,5,6,7,76,3,2]
+x=0
+for i in li:
+    if i>x:
+        x=i
+print(x)
+'''
+
+#9. Calculator
+
+def addition(x,y):
+    print(f"Addition is {x+y}")
+def subtraction(x,y):
+    print(f"Subtraction is {x-y}")
+def Multiplication(x,y):
+    print(f"multiplication is {x*y}")
+def division(x,y):
+    print(f"division is {x/y}")
+
+def calculator():
+    while True:
+        print("Menu")
+        print("1. for Addition +")
+        print("2. for Subtraction -")
+        print("3. for Multiplication *")
+        print("4. for Division /")
+        print("5. for Exit")
+        choice= int(input("Enter your choice"))
+        if choice==5:
+            print("exiting program")
+            break
+        x=float(input("Enter first value"))
+        y=float(input("Enter second value"))
+        if choice==1:
+            addition(x,y)
+        elif choice==2:
+            subtraction(x,y)
+        elif choice==3:
+            multiplication(x,y)
+        elif choice==4:
+            if y==0:
+                print("division by zero is not allowed")
+            else:
+                division(x,y)
+        else:
+            print("invalid choice please try again")
+
+
+#10. Roller Coster
+
+def roller_coster_ride(age,hight):
+    if age>=5 and hight>=120:
+        if age>=45:
+            print("Fees = 20$")
+        elif age>=28:
+            print("Fees = 12$")
+        elif age>=18:
+            print("Fees = 7$")
+        elif age>=5:
+            print("Fees = 4$")
+        else:
+            print("Not Allowed To Ride")
+    else:
+        print("Not Allowed to Ride")
+
